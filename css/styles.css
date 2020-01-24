@@ -1,0 +1,114 @@
+/*Размеры с макета */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 15px;
+    color: #474243;
+}
+
+header {
+    width: 100%;
+    height: 328px;
+    background-color: #474243;
+}
+
+footer {
+    width: 100%;
+    height: 400px;
+    background-color: #474243;
+}
+
+main {
+    max-width: 976px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+}
+
+main .col {
+    padding: 0;
+}
+.left-col {
+    max-width: 267px;
+}
+.profile-menu {
+    height: 880px;
+    background-color: #474243;
+}
+
+.application-form {
+    align-self: flex-start;
+    flex-grow: 1;
+    background-color: #f7f5f1;
+    padding: 50px 84px 40px 82px;
+}
+
+.light-text {
+    color: #999999;
+}
+
+.application-form label {
+    margin-bottom: 4px;
+}
+
+.application-form h5 {
+    font-size: 22px;
+    margin: 0;
+}
+
+.application-form p {
+    margin-top: 8px;
+    margin-bottom: 39px;
+}
+
+.application-form ul {
+    font-size: 11px;
+}
+
+.application-form select {
+    height: 39px;
+    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.application-form .form-group {
+    margin-bottom: 20px;
+}
+
+.application-form .form-control {
+    border-radius: 3px;
+    border: none;
+}
+
+#application-text{
+    height: 116px;
+    padding: 0;
+    margin-bottom: 40px;
+    box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.1);
+    resize: none;
+}
+
+
+.form-submit {
+    width: 277px;
+    height: 40px;
+    margin-top: 40px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 0 #757a3b;
+    background-color: #939c3e;
+    color: white;
+}
+
+.warning-text {
+    color: #f26a36;
+}
+
+
+
+
