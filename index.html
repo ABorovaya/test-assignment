@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+
     <title>Форма обращения</title>
 </head>
 
@@ -23,67 +25,71 @@
 
             <div class="col">
                 <form method="post" class="application-form">
-                    <h5>Создать обращение</h5>
-                    <p class="light-text">Членство в клубе предоставляет возможность один раз в месяц бесплатно заказать
-                        одну
-                        консультацию на
-                        выбор.</p>
+                    <div class="form-content container-fluid">
+                        <h5>Создать обращение</h5>
+                        <p class="light-text">Членство в клубе предоставляет возможность один раз в месяц бесплатно
+                            заказать
+                            одну
+                            консультацию на
+                            выбор.</p>
 
 
-                    <div class="row">
-                        <div class="form-group col-sm">
-                            <label for="order_number" class="light-text">Номер заказа</label>
-                            <select id="order_number" class="form-control">
-                                <option value="" selected disabled>Укажите номер заказа...</option>
-                                <option value="1">№1</option>
-                                <option value="2">№2</option>
-                                <option value="3">№3</option>
+                        <div class="row">
+                            <div class="form-group col-md">
+                                <label for="order_number" class="light-text">Номер заказа</label>
+                                <select id="order_number" class="form-control">
+                                    <option value="" selected disabled>Укажите номер заказа...</option>
+                                    <option value="1">№1</option>
+                                    <option value="2">№2</option>
+                                    <option value="3">№3</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md">
+                                <label for="application_reason" class="light-text">Причина обращения <span
+                                        class="warning-text">*</span></label>
+                                <select id="application_reason" class="form-control" required>
+                                    <option value="" selected disabled>Выберите причину...</option>
+                                    <option value="1">Причина 1</option>
+                                    <option value="2">Причина 2</option>
+                                    <option value="3">Причина 3</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="product" class="light-text">Товар из заказа</label>
+                            <select id="product" class="form-control" multiple>
+                                <option value="" selected disabled>Укажите товар, по которому создается обращение...
+                                </option>
+                                <option value="1">Товар 1</option>
+                                <option value="2">Товар 2</option>
+                                <option value="3">Товар 3</option>
                             </select>
                         </div>
-                        <div class="form-group col-sm">
-                            <label for="application_reason" class="light-text">Причина обращения <span
+
+                        <div class="form-group">
+                            <label for="application-text" class="light-text">Текст обращения <span
                                     class="warning-text">*</span></label>
-                            <select id="application_reason" class="form-control" required>
-                                <option value="" selected disabled>Выберите причину...</option>
-                                <option value="1">Причина 1</option>
-                                <option value="2">Причина 2</option>
-                                <option value="3">Причина 3</option>
-                            </select>
+                            <textarea id="application-text" class="form-control" required></textarea>
                         </div>
+
+
+                        <h5>Прикрепить фотографии</h5>
+                        <input id="application-photos" type="file" multiple accept="image/png,image/jpeg">
+
+                        <ul>
+                            <li>Поддерживаемые форматы: JPG, JPEG, PNG</li>
+                            <li>Обзорная фотография товара целиком</li>
+                            <li>Фотография, на которой четко видно дату изготовления, скроки хранения или номер партии
+                            </li>
+                            <li>Предполагаемый дефект товара</li>
+                            <li>Предмет должен быть в фокусе, не размытым, его маркировка &#8212; четкой, хорошо
+                                читаемой
+                            </li>
+                        </ul>
+
+                        <input id="submit_button" type="submit" class="form-submit" value="ОТПРАВИТЬ ОБРАЩЕНИЕ">
                     </div>
-
-                    <div class="form-group">
-                        <label for="product" class="light-text">Товар из заказа</label>
-                        <select id="product" class="form-control" multiple>
-                            <option value="" selected disabled>Укажите товар, по которому создается обращение...
-                            </option>
-                            <option value="1">Товар 1</option>
-                            <option value="2">Товар 2</option>
-                            <option value="3">Товар 3</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="application-text" class="light-text">Текст обращения <span
-                                class="warning-text">*</span></label>
-                        <textarea id="application-text" class="form-control" required></textarea>
-                    </div>
-
-
-                    <h5>Прикрепить фотографии</h5>
-                    <input id="application-photos" type="file" multiple accept="image/png,image/jpeg">
-
-                    <ul>
-                        <li>Поддерживаемые форматы: JPG, JPEG, PNG</li>
-                        <li>Обзорная фотография товара целиком</li>
-                        <li>Фотография, на которой четко видно дату изготовления, скроки хранения или номер партии</li>
-                        <li>Предполагаемый дефект товара</li>
-                        <li>Предмет должен быть в фокусе, не размытым, его маркировка &#8212; четкой, хорошо читаемой
-                        </li>
-                    </ul>
-
-                    <input id="submit_button" type="submit" class="form-submit" value="ОТПРАВИТЬ ОБРАЩЕНИЕ">
-
                 </form>
             </div>
         </div>

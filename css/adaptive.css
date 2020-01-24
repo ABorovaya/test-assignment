@@ -1,0 +1,46 @@
+@media (max-width: 319.98px) {
+    .left-col {
+        display: none;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767.98px) {
+    header {
+        height: 208px;
+    }
+    footer {
+        height: 691px;
+    }
+    .left-col {
+        display: none;
+    }
+    .application-form {
+        padding: 20px 15px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+    main {
+        padding: 0 15px;
+    }
+    header {
+        height: 139px;
+    }
+    footer {
+        height: 426px;
+    }
+    .application-form {
+        padding: 30px 16px;
+    }
+    .application-form .form-content {
+        max-width: 461px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1365.98px) {
+    header {
+        height: 280px;
+    }
+
+}
+

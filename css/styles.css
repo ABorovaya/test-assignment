@@ -26,35 +26,37 @@ main {
     margin-right: auto;
 }
 
-.main-container {
-    width: 100%;
-    display: flex;
-}
-
 main .col {
     padding: 0;
 }
+
 .left-col {
     max-width: 267px;
 }
+
 .profile-menu {
     height: 880px;
     background-color: #474243;
 }
 
 .application-form {
-    align-self: flex-start;
-    flex-grow: 1;
     background-color: #f7f5f1;
-    padding: 50px 84px 40px 82px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+.application-form .form-content {
+    max-width: 552px;
+    padding: 0;
 }
 
-.light-text {
-    color: #999999;
+/*Размеры текста*/
+main h1 {
+    font-size: 43px;
 }
 
 .application-form label {
     margin-bottom: 4px;
+    font-size: 13px;
 }
 
 .application-form h5 {
@@ -75,6 +77,8 @@ main .col {
     height: 39px;
     box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
 }
+
+/*Форма*/
 
 .application-form .form-group {
     margin-bottom: 20px;
@@ -103,6 +107,11 @@ main .col {
     box-shadow: 0 1px 0 0 #757a3b;
     background-color: #939c3e;
     color: white;
+}
+
+/*Специальные цвета текста*/
+.light-text {
+    color: #999999;
 }
 
 .warning-text {
