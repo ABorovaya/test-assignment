@@ -56,12 +56,10 @@
                                     <option value="1">Причина 1</option>
                                     <option value="2">Причина 2</option>
                                     <option value="3">Причина 3</option>
-                                    <option value="1">Причина 1</option>
-                                    <option value="2">Причина 2</option>
-                                    <option value="3">Причина 3</option>
-                                    <option value="1">Причина 1</option>
-                                    <option value="2">Причина 2</option>
-                                    <option value="3">Причина 3</option>
+                                    <option value="4">Причина 4</option>
+                                    <option value="5">Причина 5</option>
+                                    <option value="6">Причина 6</option>
+                                    <option value="7">Причина 7</option>
                                 </select>
                             </div>
                         </div>
@@ -73,12 +71,11 @@
                                 <option value="1">Товар 1</option>
                                 <option value="2">Товар 2</option>
                                 <option value="3">Товар 3</option>
-                                <option value="1">Товар 1</option>
-                                <option value="2">Товар 2</option>
-                                <option value="3">Товар 3</option>
-                                <option value="1">Товар 1</option>
-                                <option value="2">Товар 2</option>
-                                <option value="3">Товар 3</option>
+                                <option value="4">Товар 4</option>
+                                <option value="5">Товар 5</option>
+                                <option value="6">Товар 6</option>
+                                <option value="7">Товар 7</option>
+                                <option value="8">Товар 8</option>
                             </select>
                         </div>
 
@@ -138,11 +135,16 @@
             }
         );
 
+        //оставить кнопку селекта "открытой" при открытии списка
+        //(убрать закругления снизу)
         $(document).mouseup(function (e) {
-            let activeSelect = $(".active-select-button"); // тут указываем ID элемента
-            if (!activeSelect.is(e.target) // если клик был не по нашему блоку
-                && activeSelect.has(e.target).length === 0) { // и не по его дочерним элементам
-                activeSelect.removeClass('active-select-button'); // скрываем его
+            let activeSelect = $('.active-select-button');
+            let multiselectDropdown = $('[data-id="product_selector"] + .dropdown-menu'); //открывающийся список мультиселекта
+            if (!activeSelect.is(e.target)
+                && activeSelect.has(e.target).length === 0
+                && !multiselectDropdown.is(e.target)
+                && multiselectDropdown.has(e.target).length === 0) {
+                activeSelect.removeClass('active-select-button');
             }
         });
 
