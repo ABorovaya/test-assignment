@@ -69,10 +69,6 @@ main h1 {
     margin-bottom: 39px;
 }
 
-.application-form ul {
-    font-size: 11px;
-}
-
 
 /*Форма*/
 
@@ -93,6 +89,23 @@ main h1 {
     resize: none;
 }
 
+.photo-gallery {
+    margin: 20px 0 18px 0;
+}
+
+.add-photo-button {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border: 2px dashed #e5e5e5;
+    background: #ffffff url('../img/add.svg')  no-repeat 50% 50%;
+}
+
+.photo-requirements {
+    font-size: 11px;
+    margin: 0 0 0 3em;
+
+}
 
 .form-submit {
     width: 277px;
@@ -118,7 +131,6 @@ main h1 {
     border: 1px #f7f5f1;
     box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1) !important;
     outline-color: transparent !important;
-
 }
 
 .application-form .filter-option-inner-inner {
@@ -143,18 +155,21 @@ main h1 {
     width: 100%;
     max-height: 239px;
     margin: 0;
-    padding: 0;
+    padding: 0 0 1px 0;
     font-size: 15px;
     font-family: inherit !important;
     color: inherit !important;
     border-radius: 0 0 3px 3px;
     border: 1px #f7f5f1;
-    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1) !important;
+    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
 }
+
+
 .application-form .dropdown-item {
-    border-top: 1px #f4f4f4;
+    border-bottom: 1px solid #f4f4f4;
     padding: 10px;
 }
+
 
 .application-form .selected {
     background-color: transparent;
@@ -168,6 +183,15 @@ main h1 {
     outline: none;
 }
 
+.application-form .dropdown-menu .inner::-webkit-scrollbar {
+    width: 17px;
+}
+
+.application-form .dropdown-menu .inner::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: 5px solid white;
+    background-color: rgba(0, 0, 0, 0.48);
+}
 
 /*Мультиселект*/
 .application-form .show-tick .check-mark {
