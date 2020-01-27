@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/css/bootstrap-multiselect.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.12/css/bootstrap-select.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/css/bootstrap-multiselect.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.12/css/bootstrap-select.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
@@ -39,7 +41,8 @@
                         <div class="row">
                             <div class="form-group col-md">
                                 <label for="order_number_sel" class="light-text">Номер заказа</label>
-                                <select id="order_number_sel" class="form-control selectpicker" title="Укажите номер заказа...">
+                                <select id="order_number_sel" class="form-control selectpicker"
+                                        title="Укажите номер заказа...">
                                     <option value="1">№1</option>
                                     <option value="2">№2</option>
                                     <option value="3">№3</option>
@@ -48,7 +51,14 @@
                             <div class="form-group col-md">
                                 <label for="application_reason_sel" class="light-text">Причина обращения <span
                                         class="warning-text">*</span></label>
-                                <select id="application_reason_sel" class="form-control selectpicker" title="Выберите причину..." required>
+                                <select id="application_reason_sel" class="form-control selectpicker"
+                                        title="Выберите причину..." required>
+                                    <option value="1">Причина 1</option>
+                                    <option value="2">Причина 2</option>
+                                    <option value="3">Причина 3</option>
+                                    <option value="1">Причина 1</option>
+                                    <option value="2">Причина 2</option>
+                                    <option value="3">Причина 3</option>
                                     <option value="1">Причина 1</option>
                                     <option value="2">Причина 2</option>
                                     <option value="3">Причина 3</option>
@@ -58,7 +68,14 @@
 
                         <div class="form-group">
                             <label for="product_selector" class="light-text">Товар из заказа</label>
-                            <select id="product_selector" class="form-control selectpicker" title="Укажите товары, по которым создается обращение..." multiple>
+                            <select id="product_selector" class="form-control selectpicker"
+                                    title="Укажите товары, по которым создается обращение..." multiple>
+                                <option value="1">Товар 1</option>
+                                <option value="2">Товар 2</option>
+                                <option value="3">Товар 3</option>
+                                <option value="1">Товар 1</option>
+                                <option value="2">Товар 2</option>
+                                <option value="3">Товар 3</option>
                                 <option value="1">Товар 1</option>
                                 <option value="2">Товар 2</option>
                                 <option value="3">Товар 3</option>
@@ -73,9 +90,12 @@
 
 
                         <h5>Прикрепить фотографии</h5>
-                        <input id="application-photos" type="file" multiple accept="image/png,image/jpeg">
+                        <div class="photo-gallery">
+                            <a class="add-photo-button" href=""></a>
+                        </div>
 
-                        <ul>
+
+                        <ul class="photo-requirements">
                             <li>Поддерживаемые форматы: JPG, JPEG, PNG</li>
                             <li>Обзорная фотография товара целиком</li>
                             <li>Фотография, на которой четко видно дату изготовления, скроки хранения или номер партии
@@ -108,12 +128,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.12/js/bootstrap-select.min.js"></script>
 
 <script type="text/javascript">
-    $(document).ready(function() {
+    $(document).ready(function () {
         $('#product_selector').selectpicker();
         $('#order_number_sel').selectpicker();
         $('#application_reason_sel').selectpicker();
 
-        $('button').on('click',  function (e) {
+        $('button').on('click', function (e) {
                 $(this).toggleClass('active-select-button');
             }
         );
@@ -124,16 +144,21 @@
                 && activeSelect.has(e.target).length === 0) { // и не по его дочерним элементам
                 activeSelect.removeClass('active-select-button'); // скрываем его
             }
-
-
         });
 
-
+        $('.application-form').on('submit', function (e) {
+            e.preventDefault();
+            let orderNumber = $('#order_number_sel').val();
+            let applicationReason = $('#application_reason_sel').val();
+            let products = $('#product_selector').val();
+            let applicationText = $('#application_text').val();
+            let dataMessage = "Номер заказа: " + orderNumber;
+            dataMessage += "\nПричина обращения: " + applicationReason;
+            dataMessage += "\nТовары из заказа: " + products;
+            dataMessage += "\nТекст обращения: " + applicationText;
+            alert(dataMessage);
+        });
     });
-
-
-
-
 </script>
 </body>
 </html>
