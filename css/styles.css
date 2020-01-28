@@ -168,7 +168,6 @@ main h1 {
 }
 
 .active-select-button.dropdown-toggle::after {
-    transform: rotate(180deg);
     color: #474243;
 }
 
