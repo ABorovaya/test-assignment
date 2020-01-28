@@ -1,15 +1,11 @@
-@media (max-width: 319.98px) {
-    .left-col {
-        display: none;
-    }
-}
-
-@media (min-width: 320px) and (max-width: 767.98px) {
+@media (max-width: 767.98px) {
     header {
         height: 208px;
+        margin-bottom: 28px;
     }
     footer {
         height: 691px;
+        margin-top: 20px;
     }
     .left-col {
         display: none;
@@ -17,6 +13,27 @@
     .application-form {
         padding: 20px 15px;
     }
+    .application-form p {
+        margin-bottom: 20px;
+    }
+    main h1 {
+        font-size: 20px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .content-container {
+        margin-top: 50px;
+    }
+    .form-submit {
+        margin-top: 20px;
+    }
+    .photo-gallery {
+        margin: 16px 0 16px 0;
+    }
+    #application_text {
+        margin-bottom: 20px;
+    }
+
 }
 
 @media (min-width: 768px) and (max-width: 1023.98px) {
@@ -29,18 +46,36 @@
     footer {
         height: 426px;
     }
+    .left-col {
+        max-width: 220px;
+        margin-right: 25px;
+    }
     .application-form {
         padding: 30px 16px;
     }
     .application-form .form-content {
         max-width: 461px;
     }
+    main h1 {
+        font-size: 20px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .application-form .form-submit {
+        margin-top: 20px;
+    }
+    .application-form p {
+        margin-bottom: 20px;
+    }
 }
 
 @media (min-width: 1024px) and (max-width: 1365.98px) {
     header {
         height: 280px;
+        margin-bottom: 25px;
     }
-
+    .content-container {
+        margin-top: 25px;
+    }
 }
 

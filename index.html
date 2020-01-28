@@ -21,7 +21,7 @@
 <main>
 
     <h1>Личный кабинет</h1>
-    <div class="container-fluid">
+    <div class="content-container container-fluid">
         <div class="row">
             <div class="col left-col">
                 <div class="profile-menu"></div>
@@ -125,10 +125,23 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.12/js/bootstrap-select.min.js"></script>
 
 <script type="text/javascript">
+    function changeSelectTitle() {
+        let selectTitle;
+        if($(window).width() <= 768) {
+            selectTitle = 'Товары по обращению...';
+        } else {
+            selectTitle = 'Укажите товары, по которым создается обращение...';
+        }
+        $('#product_selector').selectpicker({title: selectTitle}).selectpicker('render');
+    }
+
     $(document).ready(function () {
         $('#product_selector').selectpicker();
         $('#order_number_sel').selectpicker();
         $('#application_reason_sel').selectpicker();
+
+        changeSelectTitle();
+        $(window).resize(changeSelectTitle);
 
         $('button').on('click', function (e) {
                 $(this).toggleClass('active-select-button');
